@@ -16,11 +16,11 @@ const symbols: Record<number, {symbol: string, value: number}> = {
 }
 export function convert(number: number): string {
     if(number === 0) return ""
-    let symbol = getSymbolAndValue(number);
+    let symbol = nearestSymbolFor(number);
     return symbol.symbol + convert(number - symbol.value)
 }
 
-function getSymbolAndValue(number: number): {symbol: string, value: number} {
+function nearestSymbolFor(number: number): {symbol: string, value: number} {
     let keys = Object.keys(symbols).map(value => Number(value)).reverse()
     for (let key of keys) {
         if(number >= key) return symbols[key]
