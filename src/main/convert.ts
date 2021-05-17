@@ -6,6 +6,7 @@ const symbols: Record<number, {symbol: string, value: number}> = {
     9: {symbol: "IX", value: 9},
     10: {symbol: "X", value: 10},
     40: {symbol: "XL", value: 40},
+    50: {symbol: "L", value: 50},
 }
 export function convert(number: number): string {
     if(number === 0) return ""
