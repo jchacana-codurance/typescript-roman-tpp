@@ -1,6 +1,4 @@
 export function convert(number: number): string {
-    let roman = '';
-    if(number >= 1)
-        return 'I'
-    return roman
+    let roman = ['', 'I', 'II'];
+    return roman[number]
 }
