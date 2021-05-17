@@ -1,0 +1,26 @@
+{
+  "name": "typescript-base",
+  "version": "1.0.0",
+  "description": "TypeScript base example project",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "test": "jest --",
+    "test:watch": "jest --watch --",
+    "test:watch-all": "jest --watchAll"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.31",
+    "deep-equal": "^2.0.5",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/deep-equal": "^1.0.1",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "jest-mock-extended": "^1.0.13",
+    "ts-jest": "^26.5.2"
+  }
+}
