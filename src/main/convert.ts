@@ -8,7 +8,7 @@ const symbols: Record<number, string> = {
 export function convert(number: number): string {
     let symbol = getSymbolAndValue(number);
     if(number >= 9) {
-        return symbol.symbol + convert(number - 9)
+        return symbol.symbol + convert(number - symbol.value)
     }
     if(number >= 5) return symbols[5] + convert(number - 5)
     if(number >= 4) return symbols[4]
