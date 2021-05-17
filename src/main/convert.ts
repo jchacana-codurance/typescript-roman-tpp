@@ -1,9 +1,9 @@
-const symbols: Record<number, string> = {
-    0: '',
-    1: 'I',
-    4: 'IV',
-    5: 'V',
-    9: 'IX'
+const symbols: Record<number, {symbol: string, value: number}> = {
+    0: {symbol: "", value: 0},
+    1: {symbol: "I", value: 1},
+    4: {symbol: "IV", value: 4},
+    5: {symbol: "V", value: 5},
+    9: {symbol: "IX", value: 9}
 }
 export function convert(number: number): string {
     if(number === 0) return ""
@@ -12,9 +12,9 @@ export function convert(number: number): string {
 }
 
 function getSymbolAndValue(number: number): {symbol: string, value: number} {
-    if(number >= 9) return {symbol: "IX", value: 9}
-    if(number >= 5) return {symbol: "V", value: 5}
-    if(number >= 4) return {symbol: "IV", value: 4}
-    if(number >= 1) return {symbol: "I", value: 1}
-    return {symbol: "", value: 0}
+    if(number >= 9) return symbols[9]
+    if(number >= 5) return symbols[5]
+    if(number >= 4) return symbols[4]
+    if(number >= 1) return symbols[1]
+    return symbols[0]
 }
