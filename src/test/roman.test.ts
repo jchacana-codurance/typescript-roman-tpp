@@ -29,6 +29,14 @@ describe('Roman Numeral converter', () => {
         ["LXXIV", 74],
         ["LXXXIX", 89],
         ["XC", 90],
+        ["C", 100],
+        ["CD", 400],
+        ["D", 500],
+        ["CM", 900],
+        ["M", 1000],
+        ["MCMXCIX", 1999],
+        ["MMVIII", 2008],
+        ["MMMCMXCIX", 3999],
     ])("should return '%s' for %i", (expected: string, number: number) => {
         const roman = convert(number)
         expect(roman).toBe(expected)

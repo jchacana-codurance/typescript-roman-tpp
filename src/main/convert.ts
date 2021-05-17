@@ -7,6 +7,12 @@ const symbols: Record<number, {symbol: string, value: number}> = {
     10: {symbol: "X", value: 10},
     40: {symbol: "XL", value: 40},
     50: {symbol: "L", value: 50},
+    90: {symbol: "XC", value: 90},
+    100: {symbol: "C", value: 100},
+    400: {symbol: "CD", value: 400},
+    500: {symbol: "D", value: 500},
+    900: {symbol: "CM", value: 900},
+    1000: {symbol: "M", value: 1000},
 }
 export function convert(number: number): string {
     if(number === 0) return ""
