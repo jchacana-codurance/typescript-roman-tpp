@@ -4,7 +4,8 @@ const symbols: Record<number, {symbol: string, value: number}> = {
     4: {symbol: "IV", value: 4},
     5: {symbol: "V", value: 5},
     9: {symbol: "IX", value: 9},
-    10: {symbol: "X", value: 10}
+    10: {symbol: "X", value: 10},
+    40: {symbol: "XL", value: 40},
 }
 export function convert(number: number): string {
     if(number === 0) return ""
