@@ -3,7 +3,8 @@ const symbols: Record<number, {symbol: string, value: number}> = {
     1: {symbol: "I", value: 1},
     4: {symbol: "IV", value: 4},
     5: {symbol: "V", value: 5},
-    9: {symbol: "IX", value: 9}
+    9: {symbol: "IX", value: 9},
+    10: {symbol: "X", value: 10}
 }
 export function convert(number: number): string {
     if(number === 0) return ""
@@ -12,9 +13,9 @@ export function convert(number: number): string {
 }
 
 function getSymbolAndValue(number: number): {symbol: string, value: number} {
-    if(number >= 9) return symbols[9]
-    if(number >= 5) return symbols[5]
-    if(number >= 4) return symbols[4]
-    if(number >= 1) return symbols[1]
+    let keys = Object.keys(symbols).map(value => Number(value)).reverse()
+    for (let key of keys) {
+        if(number >= key) return symbols[key]
+    }
     return symbols[0]
 }
