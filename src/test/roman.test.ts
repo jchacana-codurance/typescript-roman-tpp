@@ -13,6 +13,10 @@ describe('Roman Numeral converter', () => {
         const roman = convert(2)
         expect(roman).toBe('II')
     })
+    it("should return 'III' for 3 ", () => {
+        const roman = convert(3)
+        expect(roman).toBe('III')
+    })
 })
 
 
