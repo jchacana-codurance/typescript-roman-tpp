@@ -28,6 +28,7 @@ describe('Roman Numeral converter', () => {
         ["LXIII", 63],
         ["LXXIV", 74],
         ["LXXXIX", 89],
+        ["XC", 90],
     ])("should return '%s' for %i", (expected: string, number: number) => {
         const roman = convert(number)
         expect(roman).toBe(expected)
