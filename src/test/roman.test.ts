@@ -8,6 +8,7 @@ describe('Roman Numeral converter', () => {
         ["III", 3],
         ["IV", 4],
         ["V", 5],
+        ["VI", 6],
     ])("should return '%s' for %i", (expected: string, number: number) => {
         const roman = convert(number)
         expect(roman).toBe(expected)
