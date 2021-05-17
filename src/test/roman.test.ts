@@ -1,5 +1,3 @@
-// 1 - I
-
 import {convert} from "../main/convert";
 
 describe('Roman Numeral converter', () => {
