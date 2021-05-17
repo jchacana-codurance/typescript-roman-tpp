@@ -1,8 +1,6 @@
 const symbols: Record<number, string> = {
     0: '',
     1: 'I',
-    2: 'II',
-    3: 'III',
     4: 'IV'
 }
 export function convert(number: number): string {
