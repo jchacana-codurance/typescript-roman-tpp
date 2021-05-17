@@ -6,14 +6,9 @@ const symbols: Record<number, string> = {
     9: 'IX'
 }
 export function convert(number: number): string {
+    if(number === 0) return ""
     let symbol = getSymbolAndValue(number);
-    if(number >= 9) {
-        return symbol.symbol + convert(number - symbol.value)
-    }
-    if(number >= 5) return symbol.symbol + convert(number - symbol.value)
-    if(number >= 4) return symbol.symbol + convert(number - symbol.value)
-    if(number >= 1) return symbol.symbol + convert(number - symbol.value)
-    return symbols[number]
+    return symbol.symbol + convert(number - symbol.value)
 }
 
 function getSymbolAndValue(number: number): {symbol: string, value: number} {
